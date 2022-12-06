@@ -1,0 +1,104 @@
+$trigger1: "(max-width:991px)";
+$trigger2: "(max-width:767px)";
+.hide {
+  visibility: hidden;
+  @media #{$trigger1} {
+    visibility: visible;
+  }
+}
+.side_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #eeeeee;
+  z-index: 100;
+  padding-top: 60px;
+  transition: 0.5s ease-in;
+  .closeBtnWrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    .closeBtn {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+  }
+
+  .side_menu-list {
+    padding-top: 50px;
+    li {
+      padding: 10px 0;
+      font-size: 1.2rem;
+      &:hover {
+        color: var(--color-point);
+      }
+    }
+  }
+  @media #{$trigger2} {
+    width: 90vw;
+  }
+}
+.burger_menu {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  font-size: 1.4rem;
+  color: var() --color-gray;
+  cursor: pointer;
+}
+.login_btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+  position: relative;
+  top: 100px;
+
+  svg {
+    font-size: 1.4rem;
+  }
+  span {
+    margin-left: 5px;
+    line-height: 1;
+    font-size: 1.2rem;
+  }
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  img {
+  }
+}
+nav {
+  display: flex;
+  justify-content: center;
+  .menu-list {
+    display: flex;
+    li {
+      margin: 0 10px;
+    }
+  }
+  .search {
+    position: absolute;
+    right: 30px;
+    border-bottom: 1px solid;
+    width: 10vw;
+    white-space: nowrap;
+    vertical-align: bottom;
+    padding: 5px;
+    top: 175px;
+    input {
+      width: calc(100% - 30px);
+      margin-left: 10px;
+      font-size: 0.95rem;
+      border: none;
+      outline: none;
+    }
+  }
+  @media #{$trigger1} {
+    display: none;
+  }
+}
